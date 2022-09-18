@@ -9,7 +9,7 @@ p{ font-size: 1.25em;}
 ul{ list-style: none;}
 li{ font-size: 1.25em;}
 
-/*********************** Pantalla chica < 950 **************************/
+/*********************** Pantalla chica < 960 **************************/
 
 header, footer { background-color: orange; }
 
@@ -21,7 +21,7 @@ header { border-top: 8px solid white; } /* dejo un pequeño borde blanco arriba
     margin: auto;
 }
 
-header .contenedor {
+header .contenedor, footer .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,15 +96,29 @@ button:hover{
     background-color: chocolate;
 }
 
+footer .socialmedia {
+    /* display: flex;
+    flex-direction: row; */
+    text-align: center;
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+
+footer p { 
+    padding-right: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
 /*********************** Media queries **************************/
 
-@media (min-width: 950px){ /*pantalla grande (version desktop) >= 950*/
+@media (min-width: 960px){ /*pantalla grande (version desktop) >= 960*/
     header{
         position: fixed;
         width: 100%;
     }
 
-    header .contenedor{
+    header .contenedor, footer .contenedor{
         flex-direction: row;
         justify-content: space-between;
     }
@@ -117,6 +131,11 @@ button:hover{
 
     header a:hover {
         transform: translateY(-15px);
+    }
+
+    footer {
+        position: sticky;
+        width: 100%;
     }
 }
 
