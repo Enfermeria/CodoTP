@@ -1,0 +1,17 @@
+En index.html hay que:
+- arreglar la funcionalidad del botón Inscribite Ya!
+- hacer bien el footer
+
+En recetas.html hay que:
+- agregar muchas recetas
+- hacerlo responsive con grid
+
+En acerca de nosotros hay que:
+- implementarlo todo
+
+En contactenos hay que:
+- implementar la página
+
+Falta agregar una página de Inscribite Ya! y posiblemente otra de campus
+
+
