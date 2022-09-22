@@ -1,6 +1,8 @@
-* {box-sizing: border-box;}
-
-body {margin: 0;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
 
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
@@ -9,8 +11,8 @@ p{ font-size: 1.25em;}
 ul{ list-style: none;}
 li{ font-size: 1.25em;}
 
-/*********************** Pantalla chica < 960 **************************/
-
+/*********************** Pantalla mediana < 960 **************************/
+/************************* Pantalla chica < 560 **************************/
 header, footer { background-color: orange; }
 
 header { border-top: 8px solid white; } /* dejo un pequeño borde blanco arriba
@@ -25,13 +27,14 @@ header .contenedor, footer .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 header .titulo{
     margin: 0;
-    padding: 0px 50px;
+    padding: 0px 0px;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 5vw;
     color: white;
     /* text-shadow: 3px   3px  8px   black; */
     /*          horiz vert  blur  color   */
@@ -44,6 +47,8 @@ header nav{
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 0;
+    padding-top: 0px;
     padding-bottom: 0px;
 }
 
@@ -145,8 +150,13 @@ footer p {
     text-shadow: 2px 2px 4px black;
 }
 
-/*********************** Media queries **************************/
 
+
+/****************************************************************************
+ ****                           Media queries                            ****
+ ****************************************************************************/
+
+/****************** Pantalla grande desktop >= 960 ********************/
 @media (min-width: 960px){ /*pantalla grande (version desktop) >= 960*/
     header{
         position: fixed;
@@ -156,6 +166,11 @@ footer p {
     header .contenedor, footer .contenedor{
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    header .titulo{
+        padding: 0px 50px;
+        font-size: 3em;
     }
 
     header nav{
@@ -172,10 +187,15 @@ footer p {
         position: sticky;
         width: 100%;
     }
-}
+} /*fin pantalla grande*/
 
 
-/******************* Animacion **************************/
+
+
+/****************************************************************************
+ ****                             Animación                              ****
+ ****************************************************************************/
+
 @-webkit-keyframes elastico {
     0% {
         -webkit-transform: scaleX(1);
