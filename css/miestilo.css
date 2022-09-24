@@ -43,7 +43,14 @@ header { border-top: 8px solid white; } /* dejo un pequeño borde blanco arriba
     margin: auto;
 }
 
-header .contenedor, footer .contenedor {
+header > .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,13 +83,24 @@ header a {
     padding: 10px;
     text-decoration: none;
     transition: all 0.2s linear;
+    text-align: center;
+}
+
+#icon_home {
+    height: 20px;
+    text-align: center;
+    filter: drop-shadow(var(--sombra-menu)); 
+}
+
+.socialmedia {
+       filter: drop-shadow(var(--sombra-menu)); 
 }
 
 header a:hover {
     background-color: var(--color-hover);
     border-radius: 10px;
     box-shadow: var(--sombra-btnmenu);
-    transform: translate(20px,-5px);
+    transform: translate(20px,-5px) scale(1.1, 1.0);
 }
 
 #principal {
@@ -149,6 +167,7 @@ button{
     box-shadow: var(--sombra-btn);
     color: var(--color-texto);
     background-color: var(--color-fondo);
+    cursor: pointer;
     transition: all 0.2s linear;
 }
 
@@ -202,7 +221,7 @@ footer p {
     }
 
     header a:hover {
-        transform: translateY(-15px);
+        transform: translateY(-15px) scale(1.1, 1.0);
     }
 
     footer {

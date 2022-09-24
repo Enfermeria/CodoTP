@@ -29,4 +29,10 @@ Según la página https://blog.hubspot.es/website/colores-para-paginas-web#:~:te
 - Naranja: es un color que refleja diversión; también es muy famoso por su efecto de «generar hambre», por ello las cadenas de restaurantes suelen utilizarlo.
 - Negro: es empleado en marketing para representar lujo y elegancia. Es recomendable no usar este color si tu página contiene mucho texto, de esta forma evitas crear tensión en el consumidor.
 - Blanco: actualmente es una de las opciones más utilizadas. Representa pureza y claridad, además de limpieza e higiene. Es el tono que más tranquilidad brinda a los usuarios y es ideal para un blog o una página que contenga mucho texto.
-
+ 
+24/9/22 
+  - Se cambia "home" por el ícono de la casita, corrigiendo el css respectivo
+  - En el menú al hacer hover se agranda ligeramente la opción
+  - Se pone sombra a los íconos de las redes sociales para que se distingan en el footer
+  
+  - 
