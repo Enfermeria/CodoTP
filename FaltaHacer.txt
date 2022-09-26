@@ -19,3 +19,24 @@ Cambios:
 -Reducido el movimiento de los botones de el header para que no sea tan exesivo y asi se puede eliminar el borde blanco
 -borar contactenos, ingresar pop up (recetas solo visible si ingreso)
 -header de index ver comentario respecto animacion en index.html
+Nota de colores:
+La profesora mencionó que tiene los mismos colores que la "Cocina de Juan", que quizás quisiéramos cambiarlos.
+(naranja y chocolate). Pero los había dejado porque supuestamente el naranja es un color muy usado por los 
+restaurantes porque provoca hambre (según la sicología del color). 
+
+Según la página https://blog.hubspot.es/website/colores-para-paginas-web#:~:text=Utiliza%20las%20combinaciones%20b%C3%A1sicas%20de%20la%20teor%C3%ADa%20del%20color,-Las%20paletas%20de&text=Complementarios%3A%20se%20emplean%20dos%20tonos,y%20crear%20un%20perfecto%20equilibrio.
+
+- Amarillo: entusiasmo y juventud. Las empresas lo utilizan para representar su creatividad y energía. No debe usarse en exceso pues puede resultar molesto para quien la visite.
+- Rojo: energía, fuerza, pasión; logra estimular notablemente a los consumidores. No por nada Coca-Cola ha elegido este color tan llamativo. Si crees que este tono representa a tu empresa no olvides usarlo con moderación, ya que puede resultar violento o saturar a tus clientes.
+- Azul: este color transmite mucha confianza y con el cual los consumidores se sienten seguros. También simboliza responsabilidad y madurez. Seguramente lo relacionas con algunas entidades bancarias, quienes en su página web han conseguido armonía utilizando este color de forma que no pierde su cercanía con el usuario.
+- Morado: a pesar de que podría pensarse como un tono infantil, el morado representa exclusividad y riqueza.
+- Naranja: es un color que refleja diversión; también es muy famoso por su efecto de «generar hambre», por ello las cadenas de restaurantes suelen utilizarlo.
+- Negro: es empleado en marketing para representar lujo y elegancia. Es recomendable no usar este color si tu página contiene mucho texto, de esta forma evitas crear tensión en el consumidor.
+- Blanco: actualmente es una de las opciones más utilizadas. Representa pureza y claridad, además de limpieza e higiene. Es el tono que más tranquilidad brinda a los usuarios y es ideal para un blog o una página que contenga mucho texto.
+ 
+24/9/22 
+  - Se cambia "home" por el ícono de la casita, corrigiendo el css respectivo
+  - En el menú al hacer hover se agranda ligeramente la opción
+  - Se pone sombra a los íconos de las redes sociales para que se distingan en el footer
+  
+  - 

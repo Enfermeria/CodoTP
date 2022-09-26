@@ -1,6 +1,28 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+} 
 
-body {margin: 0;}
+/* Paleta de colores principal a usar*/
+:root {
+    --color-fondo: DodgerBlue; /*SteelBlue;*/ /*MediumSeaGreen;*//*orange;   */
+    --color-hover: RoyalBlue;  /*Goldenrod;*/ /*Green;         *//*chocolate;*/
+    --color-texto: white;
+    --color-sombra: black;
+    --sombra-menu: 2px 2px 4px var(--color-sombra); /* horiz vert blur color */
+    --sombra-btnmenu: 2px 2px 8px var(--color-sombra);
+    --sombra-titulo:3px 3px 4px var(--color-sombra), 0 0 25px var(--color-hover), 0 0 5px darkblue;
+
+    --color-bordebtn: rgba(0,0,0,0.3);
+    --color-sombrabtn: rgba(0,0,0,0.8);
+    --sombra-btn: 2px 2px 10px var(--color-sombrabtn);
+    --sombra-btnhover: 5px 5px 8px var(--color-sombrabtn);
+    
+    /*lienzo p/"oscurecer" la imagen p/leer mejor el texto sobre ella*/
+    --color-lienzoimg: rgba(100, 100, 100, 0.5); 
+    --lienzo: linear-gradient(0deg, var(--color-lienzoimg),var(--color-lienzoimg) )
+}
 
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
@@ -9,30 +31,36 @@ p{ font-size: 1.25em;}
 ul{ list-style: none;}
 li{ font-size: 1.25em;}
 
-/*********************** Pantalla chica < 960 **************************/
-
-header, footer { background-color: orange; }
+/*********************** Pantalla mediana < 960 **************************/
+/************************* Pantalla chica < 560 **************************/
+header, footer { background-color: var(--color-fondo); }
 
 .contenedor{
     max-width: 1400px;
     margin: auto;
 }
 
-header .contenedor, footer .contenedor {
+header > .contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header .titulo{
     margin: 0;
-    padding: 0px 50px;
+    padding: 0px 0px;
     font-weight: bold;
-    font-size: 3em;
-    color: white;
-    /* text-shadow: 3px   3px  8px   black; */
-    /*          horiz vert  blur  color   */
-    text-shadow: 3px  3px   4px black, 0 0 25px chocolate, 0 0 5px darkblue;
+    font-size: 5vw;
+    color: var(--color-texto);
+    text-shadow:var(--sombra-titulo);
     /*         name duration timing-function delay iteration-count direction fill-mode; */
     animation: elastico 10s ease 5s infinite;
 }
@@ -41,22 +69,35 @@ header nav{
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 0;
+    padding-top: 0px;
     padding-bottom: 0px;
 }
 
 header a {
-    color: white;
-    text-shadow: 2px   2px  4px   black;
+    color: var(--color-texto);
+    text-shadow: var(--sombra-menu);
     padding: 10px;
     text-decoration: none;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
+    text-align: center;
+}
+
+#icon_home {
+    height: 20px;
+    text-align: center;
+    filter: drop-shadow(var(--sombra-menu)); 
+}
+
+.socialmedia {
+       filter: drop-shadow(var(--sombra-menu)); 
 }
 
 header a:hover {
-    background-color: chocolate;
-    border-radius: 5px;
-    box-shadow: 2px 2px 8px black;
-    transform: translate(20px,-5px);
+    background-color: var(--color-hover);
+    border-radius: 10px;
+    box-shadow: var(--sombra-btnmenu);
+    transform: translate(20px,-5px) scale(1.1, 1.0);
 }
 
 #principal {
@@ -67,7 +108,7 @@ header a:hover {
     text-align: center;
     height: 90vh;
     background-image: 
-        linear-gradient(0deg, rgba(100, 100, 100, 0.5),rgba(100, 100, 100, 0.5) ),
+        var(--lienzo),
         url("../img/Sirviendo_plato1_900x0.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +116,8 @@ header a:hover {
 }
 
 #principal h1 {
-    color: white;
+    color: var(--color-texto);
+    padding: 0 0 0.5em 0;
 }
 
 #quienes_somos {
@@ -86,12 +128,12 @@ header a:hover {
     text-align: center;
     height: 92vh;
     background-image: 
-        linear-gradient(0deg, rgba(100, 100, 100, 0.5),rgba(100, 100, 100, 0.5) ),
+        var(--lienzo), 
         url("../img/equipococina.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    color: white;
+    color: var(--color-texto);
     font-size: 1.3em;
 }
 
@@ -118,14 +160,18 @@ button{
     font-weight: bold;
     padding: 10px 30px;
     border-radius: 10px;
-    border: 2px solid rgba(0,0,0,0.3);
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-    color: white;
-    background-color: orange;
+    border: 2px solid var(--color-bordebtn);
+    box-shadow: var(--sombra-btn);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    cursor: pointer;
+    transition: all 0.2s linear;
 }
 
 button:hover{
-    background-color: chocolate;
+    background-color: var(--color-hover);
+    box-shadow: var(--sombra-btn);
+    transform: translate(0px,-15px);
 }
 
 footer .socialmedia {
@@ -137,12 +183,17 @@ footer .socialmedia {
 
 footer p { 
     padding-right: 20px;
-    color: white;
-    text-shadow: 2px 2px 4px black;
+    color: var(--color-texto);
+    text-shadow: var(--sombra-menu);
 }
 
-/*********************** Media queries **************************/
 
+
+/****************************************************************************
+ ****                           Media queries                            ****
+ ****************************************************************************/
+
+/****************** Pantalla grande desktop >= 960 ********************/
 @media (min-width: 960px){ /*pantalla grande (version desktop) >= 960*/
     header{
         position: fixed;
@@ -154,6 +205,11 @@ footer p {
         justify-content: space-between;
     }
 
+    header .titulo{
+        padding: 0px 50px;
+        font-size: 3em;
+    }
+
     header nav{
         flex-direction: row;
         padding-bottom: 0px;
@@ -161,7 +217,7 @@ footer p {
     }
 
     header a:hover {
-        transform: translateY(-5px);
+        transform: translateY(-15px) scale(1.1, 1.0);
     }
 
     footer {
@@ -169,10 +225,15 @@ footer p {
         bottom: 0;
         width: 100%;
     }
-}
+} /*fin pantalla grande*/
 
 
-/******************* Animacion **************************/
+
+
+/****************************************************************************
+ ****                             Animación                              ****
+ ****************************************************************************/
+
 @-webkit-keyframes elastico {
     0% {
         -webkit-transform: scaleX(1);
