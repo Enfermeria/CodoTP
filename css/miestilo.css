@@ -97,7 +97,7 @@ header a:hover {
     background-color: var(--color-hover);
     border-radius: 10px;
     box-shadow: var(--sombra-btnmenu);
-    transform: translate(20px,-5px) scale(1.1, 1.0);
+    transform: translate(0px,-5px) scale(1.1, 1.0);
 }
 
 #principal {
@@ -171,7 +171,7 @@ button{
 button:hover{
     background-color: var(--color-hover);
     box-shadow: var(--sombra-btn);
-    transform: translate(0px,-15px);
+    transform: translate(0px,-5px);
 }
 
 footer .socialmedia {
@@ -217,7 +217,7 @@ footer p {
     }
 
     header a:hover {
-        transform: translateY(-15px) scale(1.1, 1.0);
+        transform: translateY(-5px) scale(1.1, 1.0);
     }
 
     footer {
