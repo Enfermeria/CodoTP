@@ -15,3 +15,7 @@ En contactenos hay que:
 Falta agregar una página de Inscribite Ya! y posiblemente otra de campus
 
 
+Cambios:
+-Reducido el movimiento de los botones de el header para que no sea tan exesivo y asi se puede eliminar el borde blanco
+-borar contactenos, ingresar pop up (recetas solo visible si ingreso)
+-header de index ver comentario respecto animacion en index.html

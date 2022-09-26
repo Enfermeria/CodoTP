@@ -13,9 +13,6 @@ li{ font-size: 1.25em;}
 
 header, footer { background-color: orange; }
 
-header { border-top: 8px solid white; } /* dejo un pequeño borde blanco arriba
-    para que se note el efecto del botón del menú que sube y "sobresale" del header */
-
 .contenedor{
     max-width: 1400px;
     margin: auto;
@@ -52,12 +49,12 @@ header a {
     text-shadow: 2px   2px  4px   black;
     padding: 10px;
     text-decoration: none;
-    transition: all 0.2s linear;
+    transition: all 0.3s linear;
 }
 
 header a:hover {
     background-color: chocolate;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 2px 2px 8px black;
     transform: translate(20px,-5px);
 }
@@ -135,7 +132,6 @@ footer .socialmedia {
     /* display: flex;
     flex-direction: row; */
     text-align: center;
-    padding-bottom: 0px;
     padding-left: 20px;
 }
 
@@ -165,11 +161,12 @@ footer p {
     }
 
     header a:hover {
-        transform: translateY(-15px);
+        transform: translateY(-5px);
     }
 
     footer {
-        position: sticky;
+        position: absolute;
+        bottom: 0;
         width: 100%;
     }
 }
