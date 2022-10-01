@@ -41,6 +41,7 @@ header, footer { background-color: var(--color-fondo); }
 }
 
 header > .contenedor {
+    margin-bottom:9px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,7 +222,7 @@ footer p {
     }
 
     footer {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 100%;
     }
@@ -310,4 +311,17 @@ footer p {
     }
 
     to {}
+}
+
+/******* recetas *********/
+.recetario {
+    display: grid;
+    width: 90%;
+    height: 600px;
+    grid-template-columns: auto auto auto;
+    margin-left: 3%;
+    gap: 5px;
+}
+.grid-item {
+    text-align: center;
 }

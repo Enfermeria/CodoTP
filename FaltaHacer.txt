@@ -13,11 +13,10 @@ En contactenos hay que:
 - implementar la página
 
 Falta agregar una página de Inscribite Ya! y posiblemente otra de campus
-
+-borar contactenos, ingresar pop up (recetas solo visible si ingreso)
 
 Cambios:
 -Reducido el movimiento de los botones de el header para que no sea tan exesivo y asi se puede eliminar el borde blanco
--borar contactenos, ingresar pop up (recetas solo visible si ingreso)
 -header de index ver comentario respecto animacion en index.html
 Nota de colores:
 La profesora mencionó que tiene los mismos colores que la "Cocina de Juan", que quizás quisiéramos cambiarlos.
