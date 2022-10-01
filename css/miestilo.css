@@ -35,15 +35,13 @@ li{ font-size: 1.25em;}
 /************************* Pantalla chica < 560 **************************/
 header, footer { background-color: var(--color-fondo); }
 
-header { border-top: 8px solid white; } /* dejo un pequeño borde blanco arriba
-    para que se note el efecto del botón del menú que sube y "sobresale" del header */
-
 .contenedor{
     max-width: 1400px;
     margin: auto;
 }
 
 header > .contenedor {
+    margin-bottom:9px ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,7 +98,7 @@ header a:hover {
     background-color: var(--color-hover);
     border-radius: 10px;
     box-shadow: var(--sombra-btnmenu);
-    transform: translate(20px,-5px) scale(1.1, 1.0);
+    transform: translate(0px,-5px) scale(1.1, 1.0);
 }
 
 #principal {
@@ -174,14 +172,13 @@ button{
 button:hover{
     background-color: var(--color-hover);
     box-shadow: var(--sombra-btn);
-    transform: translate(0px,-15px);
+    transform: translate(0px,-5px);
 }
 
 footer .socialmedia {
     /* display: flex;
     flex-direction: row; */
     text-align: center;
-    padding-bottom: 0px;
     padding-left: 20px;
 }
 
@@ -221,11 +218,12 @@ footer p {
     }
 
     header a:hover {
-        transform: translateY(-15px) scale(1.1, 1.0);
+        transform: translateY(-5px) scale(1.1, 1.0);
     }
 
     footer {
-        position: sticky;
+        position: fixed;
+        bottom: 0;
         width: 100%;
     }
 } /*fin pantalla grande*/
@@ -313,4 +311,17 @@ footer p {
     }
 
     to {}
+}
+
+/******* recetas *********/
+.recetario {
+    display: grid;
+    width: 90%;
+    height: 600px;
+    grid-template-columns: auto auto auto;
+    margin-left: 3%;
+    gap: 5px;
+}
+.grid-item {
+    text-align: center;
 }
