@@ -1,7 +1,33 @@
+
+/* Estructura index
+Header: 
+    .contenedor_titulo
+        p #titulo
+    .contenedor_menu
+        nav
+            a*4
+Main:
+    #principal
+        h1
+        button
+    #noticias
+        .noticia*6
+            img, h4, h2, p, a
+Footer:
+    .contenedor_footer
+        .contenedor_socialmedia{}
+            img*4
+    p Hecho por...
+*/
+
+
+@import "animacion.css"; /* animación del título */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding:0;
+    scroll-behavior: smooth;
 } 
 
 /* Paleta de colores principal a usar*/
@@ -24,90 +50,112 @@
     --lienzo: linear-gradient(0deg, var(--color-lienzoimg),var(--color-lienzoimg) )
 }
 
+
+/*********************** Pantalla grande > 1024 **************************/
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
 p{ font-size: 1.25em;}
-ul{ list-style: none;}
-li{ font-size: 1.25em;}
+li{ font-size: 1em;}
 
-/*********************** Pantalla mediana < 960 **************************/
-/************************* Pantalla chica < 560 **************************/
-header, footer { background-color: var(--color-fondo); }
+/********************************************************************/
+/****                          HEADER                            ****/
+/********************************************************************/
+header { 
+    position: fixed;
+    background-color: var(--color-fondo); 
+    border-top: 8px solid white;  /* dejo un pequeño borde blanco arriba
+    para que se note el efecto del botón del menú que sube y "sobresale" del header */
+    height: 58px; 
+    width: 100%;
+}
 
-.contenedor{
-    max-width: 1400px;
+.contenedor_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
     margin: auto;
+    padding: 0px 10px 0px 45px;
+    position: relative; /*para que funcione el top*/
+    top: -5px; /* para que sobresalga un poco por arriba */
 }
 
-header > .contenedor {
-    margin-bottom:9px ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-footer .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-header .titulo{
+.contenedor_titulo{
     margin: 0;
     padding: 0px 0px;
     font-weight: bold;
-    font-size: 5vw;
+    font-size: 2.3em;
     color: var(--color-texto);
-    text-shadow:var(--sombra-titulo);
-    /*         name duration timing-function delay iteration-count direction fill-mode; */
+    text-shadow:var(--sombra-titulo); 
+    /*name duration timing-function delay iteration-count direction fill-mode; */
     animation: elastico 10s ease 5s infinite;
 }
 
-header nav{
+/* .contenedor_menu nav { } */
+
+.contenedor_menu nav ul {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    flex-direction: row;
+    height: 100%;
+    padding: 0px 20px;
 }
 
-header a {
+.contenedor_menu nav ul li{
+    list-style: none;
+    /* padding: 0px 20px; */
+}
+
+.contenedor_menu nav ul li a {
     color: var(--color-texto);
     text-shadow: var(--sombra-menu);
     padding: 10px;
     text-decoration: none;
-    transition: all 0.2s linear;
     text-align: center;
+    cursor: pointer;
+    transition: all 300ms linear;
 }
 
-#icon_home {
+/* #icon_home {
     height: 20px;
     text-align: center;
     filter: drop-shadow(var(--sombra-menu)); 
-}
+} */
 
-.socialmedia {
-       filter: drop-shadow(var(--sombra-menu)); 
-}
-
-header a:hover {
+/*.contenedor_menu nav ul li*/ a:hover {
+    transform: translateY(-5px) scale(1.1, 1.0);
     background-color: var(--color-hover);
     border-radius: 10px;
     box-shadow: var(--sombra-btnmenu);
-    transform: translate(0px,-5px) scale(1.1, 1.0);
 }
 
+#icon_menu { 
+    display:none; /* oculto en pantalla grande */
+    /* height: 20px; */
+    padding: 10px; 
+    color: var(--color-texto);
+    text-align: center;
+    align-items: center;
+    filter: drop-shadow(var(--sombra-menu)); 
+    transform: translateY(-6px);
+}
+
+
+
+
+
+/********************************************************************/
+/****                           MAIN                             ****/
+/********************************************************************/
 #principal {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 70px;
     text-align: center;
-    height: 90vh;
+    height: 95vh;
     background-image: 
         var(--lienzo),
         url("../img/Sirviendo_plato1_900x0.jpg");
@@ -120,6 +168,146 @@ header a:hover {
     color: var(--color-texto);
     padding: 0 0 0.5em 0;
 }
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 10px 0;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid var(--color-bordebtn);
+    box-shadow: var(--sombra-btn);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+button:hover{
+    background-color: var(--color-hover);
+    box-shadow: var(--sombra-btn);
+    transform: translate(0px,-15px);
+}
+
+
+
+/**************  NOTICIAS *************/
+#noticias{
+    background: black;
+    padding: 40px 10px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.noticia{
+    /* background: #1f6cb0;   */
+    color:#444;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 10px 10px 0 0;
+    background: #ececec;
+}
+    .noticia img{
+        max-width: 100%;
+    }
+    .noticia a{
+        color: var(--color-texto);
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: bold;
+        padding: 10px 30px;
+        margin: 10px 0;
+        display: inline-block;
+        border-radius: 10px;
+        border: 2px solid var(--color-bordebtn);
+        box-shadow: var(--sombra-btn);
+        color: var(--color-texto);
+        background-color: var(--color-fondo);
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+    .noticia a:hover{
+        background-color: var(--color-hover);
+        box-shadow: var(--sombra-btn);
+        transform: translate(0px,-15px);
+    }
+    .noticia h4{ /*fecha*/
+        color:white;
+        font-size: 13px;
+        padding: 10px 5px;
+        margin-top:-100px;
+    }
+    .noticia h2{ /*titulo de noticia*/
+        color:white;
+        font-size: 25px;
+        /* text-transform: uppercase; */
+        padding:0 5px 10px 5px;
+    }
+    .noticia h3{ /*copete*/
+        /* color:white; */
+        font-size: 20px;
+        /* text-transform: uppercase; */
+        padding:0 5px 10px 5px;
+    }
+
+    .noticia p{
+        padding: 0 5px;
+        /* desde aca el truco para que a la linea 15 recorte el texto poniendo ... */
+        display: -moz-box;
+        display: -webkit-box;
+        display:box;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-line-clamp: 15; /*muestra 15 lineas, despues ...*/
+        line-clamp: 15;         /* idem */
+        overflow: hidden;
+        /* hasta aca el truco para recortar texto sobrante */
+    }
+ 
+    /******* recetas *********/
+    .recetario {
+        display: grid;
+        width: 90%;
+        height: 600px;
+        grid-template-columns: auto auto auto;
+        margin-left: 3%;
+        gap: 5px;
+    }
+    .grid-item {
+        text-align: center;
+    }
+
+
+/********************************************************************/
+/****                         FOOTER                             ****/
+/********************************************************************/
+footer { background-color: var(--color-fondo); }
+
+footer .contenedor_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor_socialmedia {
+    padding-bottom: 0px;
+    padding-left: 20px;
+    filter: drop-shadow(var(--sombra-menu)); 
+}
+
+footer p { 
+    padding-right: 20px;
+    color: var(--color-texto);
+    text-shadow: var(--sombra-menu);
+}
+
+/********************************************************************/
+/****                    VIEJO CODIGO                            ****/
+/********************************************************************/
 
 #quienes_somos {
     /* display: flex;
@@ -153,40 +341,10 @@ header a:hover {
 .subrayado {
     text-decoration-line: underline;
     text-decoration-style: wavy;
-  }
-
-
-button{
-    font-size: 1.25em;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: 2px solid var(--color-bordebtn);
-    box-shadow: var(--sombra-btn);
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
-    cursor: pointer;
-    transition: all 0.2s linear;
 }
 
-button:hover{
-    background-color: var(--color-hover);
-    box-shadow: var(--sombra-btn);
-    transform: translate(0px,-5px);
-}
 
-footer .socialmedia {
-    /* display: flex;
-    flex-direction: row; */
-    text-align: center;
-    padding-left: 20px;
-}
 
-footer p { 
-    padding-right: 20px;
-    color: var(--color-texto);
-    text-shadow: var(--sombra-menu);
-}
 
 
 
@@ -194,134 +352,211 @@ footer p {
  ****                           Media queries                            ****
  ****************************************************************************/
 
-/****************** Pantalla grande desktop >= 960 ********************/
-@media (min-width: 960px){ /*pantalla grande (version desktop) >= 960*/
-    header{
-        position: fixed;
-        width: 100%;
+/****************** Pantalla mediana <= 1024 *******************/
+@media screen and (max-width: 1024px) { 
+
+    #titulo {
+        font-size: 4.5vw;
     }
 
-    header .contenedor, footer .contenedor{
-        flex-direction: row;
-        justify-content: space-between;
+    .off {
+        display: none; /* oculto el texto del menu, dejo solo los simbolos */
     }
 
-    header .titulo{
-        padding: 0px 50px;
-        font-size: 3em;
+    .contenedor_header{
+        position: relative; /*para que funcione el top*/
+        top: 0px; /* que deje de sobresalir por arriba */
     }
 
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0px;
+    #noticias{
+        grid-template-columns: 1fr 1fr; /* las noticias solo 2 columnas */
+    }
+  
+}
+
+
+
+
+
+
+/****************** Pantalla mediana <= 768 *******************/
+@media screen and (max-width: 768px) { 
+
+    /* #titulo {
+        font-size: 4.5vw;
+    } */
+
+    #icon_menu {
+        display: block; /* muestro el icono del menu*/
+        cursor: pointer;
+    }
+
+
+
+    .contenedor_menu{
+        height: 0px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+    }
+     
+    .contenedor_menu nav a {
+        display: flex;
+        flex-direction: column;
+        color: var(--color-texto);
+        text-shadow: var(--sombra-menu);
+        background-color: var(--color-fondo);
+        padding: 20px 0px;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 300ms linear;
+    }
+
+    .menu_mostrado{ /*Clase manipulada por JS*/
+        height: 235px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .menu nav ul{
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #fff;
+    } */
+
+
+    /* #icon_home {
+        height: 20px;
+        text-align: center;
+        filter: drop-shadow(var(--sombra-menu)); 
+    }
+     */
+    .contenedor_menu nav a:hover {
+        background-color: var(--color-hover);
+        border-radius: 10px;
+        box-shadow: var(--sombra-btnmenu);
+        transform: translateY(-10px) scale(1.1, 1.0);
+    }
+    
+    h1{ font-size: 7.0vw;}
+    
+    #noticias{
+        grid-template-columns: 1fr; /* las noticias solo 1 columna */
+    }
+
+    footer .contenedor_footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+/****************** Pantalla mediana < 576 (min 400) *******************/
+@media screen and (max-width: 576px) and (min-width: 400px) { 
+
+    /* #titulo {
+        font-size: 4.5vw;
+    } */
+
+    #icon_menu {
+        display: block; /* muestro el icono del menu*/
+        cursor: pointer;
+    }
+
+
+
+    .contenedor_menu{
+        height: 0px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+    }
+     
+    .contenedor_menu nav a {
+        display: flex;
+        flex-direction: column;
+        color: var(--color-texto);
+        text-shadow: var(--sombra-menu);
+        background-color: var(--color-fondo);
+        padding: 20px 0px;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 300ms linear;
+    }
+
+    .menu_mostrado{ /*Clase manipulada por JS*/
+        height: 235px;
+        position: absolute;
+        right: 20px;
+        top: 70px;
+        overflow: hidden;
+        z-index: 10;
+        box-shadow: 0px 0px 30px -20px rgba(0,0,0,0.5);
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .menu nav ul{
+        padding: 20px 0px;
+        flex-direction: column;
+        background: #fff;
+    } */
+
+
+    /* #icon_home {
+        height: 20px;
+        text-align: center;
+        filter: drop-shadow(var(--sombra-menu)); 
+    }
+     */
+    .contenedor_menu nav a:hover {
+        background-color: var(--color-hover);
+        border-radius: 10px;
+        box-shadow: var(--sombra-btnmenu);
+        transform: translateY(-15px) scale(1.1, 1.0);
+    }
+    
+    h1{ font-size: 7.0vw;}
+    
+    #noticias{
+        grid-template-columns: 1fr; /* las noticias solo 1 columna */
+    }
+
+    footer .contenedor_footer {
+        flex-direction: column;
+    }
+
+    footer p { 
         padding-right: 20px;
+        padding-left: 20px;
+        text-align: center;
     }
-
-    header a:hover {
-        transform: translateY(-5px) scale(1.1, 1.0);
-    }
-
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-} /*fin pantalla grande*/
-
-
-
-
-/****************************************************************************
- ****                             Animación                              ****
- ****************************************************************************/
-
-@-webkit-keyframes elastico {
-    0% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1)
-    }
-
-    6% {
-        -webkit-transform: scale3d(1.25, .75, 1);
-        transform: scale3d(1.25, .75, 1)
-    }
-
-    8% {
-        -webkit-transform: scale3d(.75, 1.25, 1);
-        transform: scale3d(.75, 1.25, 1)
-    }
-
-    10% {
-        -webkit-transform: scale3d(1.15, .85, 1);
-        transform: scale3d(1.15, .85, 1)
-    }
-
-    13% {
-        -webkit-transform: scale3d(.95, 1.05, 1);
-        transform: scale3d(.95, 1.05, 1)
-    }
-
-    15% {
-        -webkit-transform: scale3d(1.05, .95, 1);
-        transform: scale3d(1.05, .95, 1)
-    }
-
-    20% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1)
-    }
-
-    to {}
 }
 
-@keyframes elastico {
-    0% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1)
-    }
-
-    6% {
-        -webkit-transform: scale3d(1.25, .75, 1);
-        transform: scale3d(1.25, .75, 1)
-    }
-
-    8% {
-        -webkit-transform: scale3d(.75, 1.25, 1);
-        transform: scale3d(.75, 1.25, 1)
-    }
-
-    10% {
-        -webkit-transform: scale3d(1.15, .85, 1);
-        transform: scale3d(1.15, .85, 1)
-    }
-
-    13% {
-        -webkit-transform: scale3d(.95, 1.05, 1);
-        transform: scale3d(.95, 1.05, 1)
-    }
-
-    15% {
-        -webkit-transform: scale3d(1.05, .95, 1);
-        transform: scale3d(1.05, .95, 1)
-    }
-
-    20% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1)
-    }
-
-    to {}
-}
-
-/******* recetas *********/
-.recetario {
-    display: grid;
-    width: 90%;
-    height: 600px;
-    grid-template-columns: auto auto auto;
-    margin-left: 3%;
-    gap: 5px;
-}
-.grid-item {
-    text-align: center;
-}

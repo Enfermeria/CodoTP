@@ -7,9 +7,9 @@ En recetas.html hay que:
 - hacerlo responsive con grid
 
 En acerca de nosotros hay que:
-- implementarlo todo
+- mejorar, poner fotos de los autores.
 
-En contactenos hay que:
+En contactenos/inscribase hay que:
 - implementar la página
 
 Falta agregar una página de Inscribite Ya! y posiblemente otra de campus
@@ -38,4 +38,14 @@ Según la página https://blog.hubspot.es/website/colores-para-paginas-web#:~:te
   - En el menú al hacer hover se agranda ligeramente la opción
   - Se pone sombra a los íconos de las redes sociales para que se distingan en el footer
   
-  - 
+10/10/22
+  - Se agrega la seccion Noticias a la landing page
+  - Se pone iconos al menu, se hace responsive para que
+    al achicar saca el texto del menu dejando iconos, y al
+    achicar aun mas deja solo las 3 barras de hamburguer.
+  - Se implementa funcionalidad javascript para mostar/ocultar
+    menu al hacer click en el hamburguer.
+  - Se hace responsive la landing page. Parte con flex
+    y parte con grid (la parte de noticias). Se ponen
+    4 puntos de corte con media queries: en 1024, 768, 576 y 400 
+

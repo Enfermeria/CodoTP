@@ -1,64 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La cocina Doce</title>
-    <link rel="shortcut icon" href="favicon/Fast food_Monochromatic.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/miestilo.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <body>
-    <Header> <!-- Titulo y menu -->
-      <div class="contenedor">
-        <p class="titulo">👨‍🍳 La cocina Doce 🍴<p>
+  <!----- iconos de fontawesome ---->
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <!----- fonts de google      ---->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>La cocina Doce</title>
+  <!----- icono para la pestaña ---->
+  <link rel="shortcut icon" href="favicon/Fast food_Monochromatic.ico" type="image/x-icon">
+  <!----- carga nuestro CSS     ---->
+  <link rel="stylesheet" href="css/miestilo.css">
+</head>
+<!---------------------------------------------------------------- Fin del  HEAD -->
+
+
+
+<body>
+  <!------------------------------------------------->
+  <!------------------ HEADER ----------------------->
+  <!------------------------------------------------->
+  <!-- Header con título y menu:
+  Tiene un contenedor_header que engloba a contenedor_titulo y contenedor_menu
+  -->
+  <Header>  
+    <div class="contenedor_header">
+
+      <div class="contenedor_titulo">
+        <p id="titulo">👨‍🍳 La cocina Doce 🍴<p>
+      </div>
+
+      <div class="contenedor_menu">
         <nav>
-          <a href="index.html"><img src="favicon/homewhite.png" alt="Home" id="icon_home"></a>
-          <a href="recetas.html">Recetas</a>
-          <a href="acerca.html">Acerca de</a>
-          <a href="contactenos.html">Contáctenos</a>
+          <ul>
+            <li><a href="index.html#principal" ><i class="fa fa-home"      aria-hidden="true"></i><span class="off"> Inicio</span   ></a></li>
+            <li><a href="recetas.html"         ><i class="fa fa-file-text" aria-hidden="true"></i><span class="off"> Recetas</span  ></a></li>
+            <li><a href="acerca.html"          ><i class="fa fa-user"      aria-hidden="true"></i><span class="off"> Nosotros</span ></a></li>
+            <li><a href="index.html#noticias"  ><i class="fa fa-newspaper" aria-hidden="true"></i><span class="off"> Noticias</span ></a></li>
+            <li><a href="contactenos.html"     ><i class="fa fa-envelope"  aria-hidden="true"></i><span class="off"> Contacto</span ></a></li>
+          </ul>
         </nav>
       </div>
-    </Header>
-  
-    <main>   <!-- Parte principal con texto -->
-      <section id="quienes_somos">
-        <br>
-        <h1>Quienes somos</h1>
-        <p>En la <stong>Cocina Doce</stong> somos un grupo de 
-          programadores aficionados a la cocina que queremos 
-          plantearte la posibilidad de que aprendas la confección de platos
-          <em>deliciosos y saludables</em>.
-        </p>
-        <p>Nos llamamos Cocina <span class="subrayado">Doce</span> porque hacemos <span class="subrayado">Doce</span>ncia en la cocina y 
-          porque somos el grupo <span class="subrayado">Doce</span> de trabajos prácticos del programa 
-          Codo a Codo 4.0 </p>
-        <p> Nuestra principal preocupación es que comas sano y te diviertas
-          preparando tus platos.</p>
-        <p>Nuestro staff docente cuenta con:</p>
-        <ul>
-          <li><strong>✔️ Federico Schmidt</strong>: Platos principales</li>
-          <li><strong>✔️ Juan D'Andrea</strong>: Postres y repostería</li>
-          <li><strong>✔️ John Molina</strong>: Panificación y coctelería</li>
-        </ul>
-        <br><br><br><br><br><br>
-      </section>
-        
-    </main>
 
-    <footer> <!-- Pie de pagina -->
-      <div class="contenedor">
-        <div class="socialmedia">
-          <img src="favicon/whatsapp-logo-24.png" alt="Whatsapp">
-          <img src="favicon/facebook-logo-24.png" alt="Facebook">
-          <img src="favicon/instagram-logo-24.png" alt="Instagram">
-          <img src="favicon/twitter-logo-24.png" alt="Twitter">
-        </div>
-        <p>Hecho por John David Molina, Federico Schmidt y Juan D'Andrea</p>
+      <!-- hamburguer del menu -->
+      <i class="fa fa-bars" aria-hidden="true" id="icon_menu"></i>
+
+    </div>
+  </Header>
+  <!----------------------------------------------------------- Fin del Header-->
+  
+  
+  
+  <!-------------------------------------------------->
+  <!--------------------- MAIN ----------------------->
+  <!-------------------------------------------------->
+  <!-- Main con sección:quienes_somos               -->
+  <main>  
+    <section id="quienes_somos">
+      <br>
+      <h1>Quienes somos</h1>
+      <p>En la <stong>Cocina Doce</stong> somos un grupo de 
+        programadores aficionados a la cocina que queremos 
+        plantearte la posibilidad de que aprendas la confección de platos
+        <em>deliciosos</em> pero <em>saludables</em>.
+      </p>
+      <p>Nos llamamos Cocina <span class="subrayado">Doce</span> porque hacemos <span class="subrayado">Doce</span>ncia en la cocina y 
+        porque somos el grupo <span class="subrayado">Doce</span> de trabajos prácticos del programa 
+        Codo a Codo 4.0 </p>
+      <p> Nuestra principal preocupación es que comas sano y te diviertas
+        preparando tus platos.</p>
+      <p>Nuestro staff docente cuenta con:</p>
+      <ul>
+        <li><strong>✔️ Federico Schmidt</strong>: Platos principales</li>
+        <li><strong>✔️ Juan D'Andrea</strong>: Postres y repostería</li>
+        <li><strong>✔️ John Molina</strong>: Panificación y coctelería</li>
+      </ul>
+      <br><br><br><br><br><br>
+    </section>   
+  </main>
+  <!----------------------------------------------------------- Fin del Main-->
+  
+  
+  
+  <!-------------------------------------------------->
+  <!------------------- FOOTER ----------------------->
+  <!-------------------------------------------------->
+  <!-- Pie de pagina con social media y autores
+  Tiene un contenedor_footer que engloba al contenedor_socialmedia y al <p> de autores
+  -->
+  <footer> 
+    <div class="contenedor_footer">
+      <div class="contenedor_socialmedia">
+        <img src="favicon/whatsapp-logo-24.png" alt="Whatsapp">
+        <img src="favicon/facebook-logo-24.png" alt="Facebook">
+        <img src="favicon/instagram-logo-24.png" alt="Instagram">
+        <img src="favicon/twitter-logo-24.png" alt="Twitter">
       </div>
-    </footer>
+      <p>Hecho por John David Molina, Federico Schmidt y Juan D'Andrea</p>
+    </div>
+  </footer>
+  <!----------------------------------------------------------- Fin del Footer-->
+  
+  
+  <!-- carga de rutinas de javascript -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>
