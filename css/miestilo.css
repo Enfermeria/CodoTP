@@ -193,7 +193,7 @@ button:hover{
 
 
 
-/**************  NOTICIAS *************/
+/**************************  NOTICIAS ***************************/
 #noticias{
     background: black;
     padding: 40px 10px;
@@ -255,6 +255,7 @@ button:hover{
 
     .noticia p{
         padding: 0 5px;
+        /***************************************************************************/
         /* desde aca el truco para que a la linea 15 recorte el texto poniendo ... */
         display: -moz-box;
         display: -webkit-box;
@@ -266,153 +267,16 @@ button:hover{
         line-clamp: 15;         /* idem */
         overflow: hidden;
         /* hasta aca el truco para recortar texto sobrante */
+        /***************************************************/
     }
- 
-
-
-    /**************  TARJETAS 3D DE RECETAS *************/
-    .contenedor_tarjetas{
-        background: #ceeaf9;
-        /* max-width: 1200px; */
-        margin: auto;
-        margin-top: 0px;
-        padding-top: 150px;
-        perspective: 1000px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .tarjeta_padre{
-        margin: 20px;
-        perspective: 1000px;
-    }
-    
-    .tarjeta_padre:hover .tarjeta{
-        transform: rotateY(180deg);
-    }
-    
-    
-    .tarjeta{
-        width: 350px;
-        height: 400px;
-        position: relative;
-        transform-style: preserve-3d;
-        transition: all 1000ms;
-    }
-
-    .tarjeta h1 {
-        font-size: 3em;
-    }
-    
-    .tarjeta_anverso{
-        background-size: cover;
-        background-position: center;
-    }
-    
-    
-    .tarjeta_anverso,
-    .tarjeta_reverso{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-        border-radius: 20px;
-    }
-    
-    .tarjeta_reverso{
-        transform: rotateY(180deg);
-        background: white;
-    }
-    
-    .contenido_tarjeta_anverso {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        padding: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        transform: translateZ(60px);
-    }
-    
-    .lienzo_fondo_tarjeta{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(0,0,0,0.4);
-        border-radius: 20px;
-    }
-    
-    .contenido_tarjeta_reverso{
-        padding: 40px;
-        text-align: center;
-        transform: translateZ(60px);
-    }
-    
-    .contenido_tarjeta_reverso p{
-        margin-top: 30px;
-        font-size: 18px;
-    }
-    
-    .contenido_tarjeta_reverso a,
-    .contenido_tarjeta_reverso input {
-        text-decoration: none;
-        display: inline-block;
-        padding: 10px 10px;
-        margin-top: 30px;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        color: white;
-        background: #58B0F6;
-        box-shadow: 1px 1px 30px -5px #58B0F6;
-        border-radius: 10px;
-        transition: box-shadow 600ms;
-    }
-    
-    .contenido_tarjeta_reverso a:hover,
-    .contenido_tarjeta_reverso input:hover {
-        box-shadow: 1px 1px 30px 0px #449de6;
-    }
+/************************* FIN NOTICIAS *************************/
 
 
 
 
-/********************************************************************/
-/****                         FOOTER                             ****/
-/********************************************************************/
-footer { background-color: var(--color-fondo); }
 
-footer .contenedor_footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.contenedor_socialmedia {
-    padding-bottom: 0px;
-    padding-left: 20px;
-    filter: drop-shadow(var(--sombra-menu)); 
-}
-
-footer p { 
-    padding-right: 20px;
-    color: var(--color-texto);
-    text-shadow: var(--sombra-menu);
-}
-
-/********************************************************************/
-/****                    VIEJO CODIGO                            ****/
-/********************************************************************/
-
+/**************************  NOSOTROS  **************************/
 #quienes_somos {
     /* display: flex;
     flex-direction: column; */
@@ -446,6 +310,272 @@ footer p {
     text-decoration-line: underline;
     text-decoration-style: wavy;
 }
+/**************************  FIN NOSOTROS  **************************/
+
+
+
+
+
+/********************  TARJETAS 3D DE RECETAS *******************/
+main h2 {
+    background: #ceeaf9;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.contenedor_tarjetas{
+    background: #ceeaf9;
+    /* max-width: 1200px; */
+    margin: auto;
+    margin-top: 0px;
+    padding-top: 10px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta_padre{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.tarjeta_padre:hover .tarjeta{
+    transform: rotateY(180deg);
+}
+
+
+.tarjeta{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1000ms;
+}
+
+.tarjeta h1 {
+    font-size: 3em;
+}
+
+.tarjeta_anverso{
+    background-size: cover;
+    background-position: center;
+}
+
+
+.tarjeta_anverso,
+.tarjeta_reverso{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.tarjeta_reverso{
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.contenido_tarjeta_anverso {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.lienzo_fondo_tarjeta{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.contenido_tarjeta_reverso{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.contenido_tarjeta_reverso p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.contenido_tarjeta_reverso a,
+.contenido_tarjeta_reverso input {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 10px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.contenido_tarjeta_reverso a:hover,
+.contenido_tarjeta_reverso input:hover {
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
+/******************  FIN TARJETAS 3D DE RECETAS ******************/
+
+
+
+
+
+
+
+
+/******************  FORMULARIO DE INSCRIPCION ******************/
+.container_inscripcion {
+    background: #181818;
+    color: var(--color-texto);
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 0.5em;
+}
+
+.logo span {
+    color: var(--color-fondo);
+}
+
+.envoltorio_inscripcion_contacto {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.envoltorio_inscripcion_contacto > * {
+    padding: 2em;
+}
+
+.formulario_inscripcion {
+    background: #222222;
+}
+
+.formulario_inscripcion form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formulario_inscripcion form label {
+    display: block;
+}
+
+.formulario_inscripcion form p {
+    margin: 0;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.formulario_inscripcion form .block {
+    grid-column: 1 / 3;
+}
+
+
+.formulario_inscripcion form input,
+.formulario_inscripcion form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: var(--color-texto);
+    border-bottom: 1px solid var(--color-fondo);
+}
+
+
+ .formulario_inscripcion form button {
+    width: 100%;
+    /* background: #B70E21;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em; */
+}
+
+/* .formulario_inscripcion form button:hover,
+.formulario_inscripcion form button:focus {
+    background: #d63031;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+} */
+
+/* INFO DE CONTACTO */
+.info_contacto {
+    background: #000;
+}
+
+.info_contacto h4, .info_contacto ul, .info_contacto p, .info_contacto iframe{
+    text-align: center;
+}
+
+.info_contacto h4 {
+    margin: 1em 0 0 0;
+}
+
+.info_contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+/***************** FIN FORMULARIO DE INSCRIPCION ****************/
+
+
+
+
+
+
+
+
+/********************************************************************/
+/****                         FOOTER                             ****/
+/********************************************************************/
+footer { background-color: var(--color-fondo); }
+
+footer .contenedor_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor_socialmedia {
+    padding-bottom: 0px;
+    padding-left: 20px;
+    filter: drop-shadow(var(--sombra-menu)); 
+}
+
+footer p { 
+    padding-right: 20px;
+    color: var(--color-texto);
+    text-shadow: var(--sombra-menu);
+}
+
 
 
 
@@ -475,6 +605,16 @@ footer p {
     #noticias{
         grid-template-columns: 1fr 1fr; /* las noticias solo 2 columnas */
     }
+
+    .container_inscripcion {
+        padding: 0 1.5em;
+
+    }
+
+    .envoltorio_inscripcion_contacto > * {
+        padding: 1em;
+    }
+
   
 }
 
@@ -486,16 +626,10 @@ footer p {
 /****************** Pantalla mediana <= 768 *******************/
 @media screen and (max-width: 768px) { 
 
-    /* #titulo {
-        font-size: 4.5vw;
-    } */
-
     #icon_menu {
         display: block; /* muestro el icono del menu*/
         cursor: pointer;
     }
-
-
 
     .contenedor_menu{
         height: 0px;
@@ -536,19 +670,6 @@ footer p {
         flex-direction: column;
     }
 
-    /* .menu nav ul{
-        padding: 20px 0px;
-        flex-direction: column;
-        background: #fff;
-    } */
-
-
-    /* #icon_home {
-        height: 20px;
-        text-align: center;
-        filter: drop-shadow(var(--sombra-menu)); 
-    }
-     */
     .contenedor_menu nav a:hover {
         background-color: var(--color-hover);
         border-radius: 10px;
@@ -562,6 +683,10 @@ footer p {
         grid-template-columns: 1fr; /* las noticias solo 1 columna */
     }
 
+    .envoltorio_inscripcion_contacto {
+        grid-template-columns: 1fr;
+    }
+    
     footer .contenedor_footer {
         flex-direction: column;
         justify-content: center;
@@ -577,17 +702,6 @@ footer p {
 /****************** Pantalla mediana < 576 (min 400) *******************/
 @media screen and (max-width: 576px) and (min-width: 400px) { 
 
-    /* #titulo {
-        font-size: 4.5vw;
-    } */
-
-    #icon_menu {
-        display: block; /* muestro el icono del menu*/
-        cursor: pointer;
-    }
-
-
-
     .contenedor_menu{
         height: 0px;
         position: absolute;
@@ -627,19 +741,6 @@ footer p {
         flex-direction: column;
     }
 
-    /* .menu nav ul{
-        padding: 20px 0px;
-        flex-direction: column;
-        background: #fff;
-    } */
-
-
-    /* #icon_home {
-        height: 20px;
-        text-align: center;
-        filter: drop-shadow(var(--sombra-menu)); 
-    }
-     */
     .contenedor_menu nav a:hover {
         background-color: var(--color-hover);
         border-radius: 10px;
