@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!----- iconos de fontawesome ---->
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <!----- fonts de google      ---->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>La cocina Doce</title>
+  <!----- icono para la pestaña ---->
+  <link rel="shortcut icon" href="favicon/Fast food_Monochromatic.ico" type="image/x-icon">
+  <!----- carga nuestro CSS     ---->
+  <link rel="stylesheet" href="css/miestilo.css">
+</head>
+<!---------------------------------------------- Fin del  HEAD -->
+
+
+
+<body>
+    <!------------------------------------------------->
+    <!------------------ HEADER ----------------------->
+    <!------------------------------------------------->
+    <!-- Header con título y menu:
+    Tiene un contenedor_header que engloba a contenedor_titulo y contenedor_menu
+    -->
+    <Header>  
+        <div class="contenedor_header">
+
+            <div class="contenedor_titulo">
+                <p id="titulo">👨‍🍳 La cocina Doce 🍴<p>
+            </div>
+
+            <div class="contenedor_menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#principal" ><i class="fa fa-home"      aria-hidden="true"></i><span class="off"> Inicio</span   ></a></li>
+                        <li><a href="recetas.html"         ><i class="fa fa-file-text" aria-hidden="true"></i><span class="off"> Recetas</span  ></a></li>
+                        <li><a href="acerca.html"          ><i class="fa fa-user"      aria-hidden="true"></i><span class="off"> Nosotros</span ></a></li>
+                        <li><a href="index.html#noticias"  ><i class="fa fa-newspaper" aria-hidden="true"></i><span class="off"> Noticias</span ></a></li>
+                        <li><a href="contactenos.html"     ><i class="fa fa-envelope"  aria-hidden="true"></i><span class="off"> Contacto</span ></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- hamburguer del menu -->
+            <i class="fa fa-bars" aria-hidden="true" id="icon_menu"></i>
+
+        </div>
+    </Header>
+    <!-------------------------------------------------------- Fin del Header-->
+
+
+
+    <!-------------------------------------------------->
+    <!--------------------- MAIN ----------------------->
+    <!-------------------------------------------------->
+    <!-- Main con ingredientes y receta -->
+    <main> 
+        <div class="contenedor_receta">
+            <div class="imagen_receta">
+                <img src="img/receta-budin-arroz-y-verduras.jpg" alt="Albóndiga veggie">
+                <h2>Budín de arroz y verduras</h2>
+            </div>
+            <div class="ingredientes">
+                <h3>Para 4 personas</h3>
+                <ul>
+                    <li>✔️ 1 taza de arroz (blanco o integral)</li>
+                    <li>✔️ 1 cebolla</li>
+                    <li>✔️ 1 zanahoria</li>
+                    <li>✔️ 2 zapallitos</li>
+                    <li>✔️ 3 huevos
+                    <li>✔️ 2 cdas. de queso de rallar
+                    <li>✔️ 1 cda. de aceite
+                </ul>
+            </div>
+            <div class="procedimiento">
+                <h3>PROCEDIMIENTO</h3>
+                <ul>
+                    <li>□ Cocinar el arroz en abundante agua y colarlo.</li>
+                    <li>□ Aparte, lavar, pelar y picar todas las verduras. </li>
+                    <li>□ Rehogar las cebollas con un poquito de aceite</li>
+                    <li>□ Agregar la zanahoria y los zapallitos. </li>
+                    <li>□ Retirar del fuego.</li>
+                    <li>□ Mezclarlo con el arroz.</li>
+                    <li>□ Agregar los huevos batidos y condimentar. </li>
+                    <li>□ Volcar la mezcla en una budinera</li>
+                    <li>□ Cubrir con el queso rallado</li>
+                    <li>□ Llevar a horno fuerte por unos 20 minutos (o hasta que la Preparación se dore).</li> 
+                    <li>□ Cortar en porciónes y servir.</li>
+                </ul>
+            </div>
+            <div class="nutricional">
+                <h3>INFORMACIÓN NUTRICIONAL</h3>
+                <h4>ACEITES</h4>
+                <p>Aportan grasas beneficiosas para la salud y vitamina E.</p>
+                <p>Brindan energía de reserva y protegen la salud de nuestro corazón.</p>
+
+                <h4>VERDURAS</h4>
+                <p>Contienen vitaminas, minerales, fibra y fitoquímicos</p>
+                <p>Refuerzan el sistema de defensas. Cada color de verdura aporta distintos tipos de vitaminas y minerales. La fibra ayuda a prevenir la obesidad, protege la salud del corazón y promueve el buen funcionamiento de los intestinos. Los fitoquímicos actúan como antioxidantes que retardan el envejecimiento celular y previenen algunos tipos de cánceres.</p>
+            </div>
+        </div>
+    </main>
+    <!---------------------------------------------- Fin del Main-->
+
+
+
+    <!-------------------------------------------------->
+    <!------------------- FOOTER ----------------------->
+    <!-------------------------------------------------->
+    <!-- Pie de pagina con social media y autores
+    Tiene un contenedor_footer que engloba al contenedor_socialmedia y al <p> de autores
+    -->
+    <footer> 
+    <div class="contenedor_footer">
+        <div class="contenedor_socialmedia">
+            <a href="https://whatsapp.com"  target="_blank"><img src="favicon/whatsapp-logo-24.png"  alt="Whatsapp" ></a>
+            <a href="https://facebook.com"  target="_blank"><img src="favicon/facebook-logo-24.png"  alt="Facebook" ></a>
+            <a href="https://instagram.com" target="_blank"><img src="favicon/instagram-logo-24.png" alt="Instagram"></a>
+            <a href="https://twitter.com"   target="_blank"><img src="favicon/twitter-logo-24.png"   alt="Twitter"  ></a>
+        </div>
+        <p><a href="acerca.html">Hecho por John David Molina, Federico Schmidt y Juan D'Andrea</a></p>
+    </div>
+    </footer>
+    <!----------------------------------------------------------- Fin del Footer-->
+
+
+    <!-- carga de rutinas de javascript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 
-/* Estructura index
+/* Estructura index: el mismo header y footer para todos
+   los html. Solo cambia el main.
 Header: 
     .contenedor_titulo
         p #titulo
@@ -33,6 +34,7 @@ Footer:
 /* Paleta de colores principal a usar*/
 :root {
     --color-fondo: DodgerBlue; /*SteelBlue;*/ /*MediumSeaGreen;*//*orange;   */
+    --color-fondo-claro: #ceeaf9;
     --color-hover: RoyalBlue;  /*Goldenrod;*/ /*Green;         *//*chocolate;*/
     --color-texto: white;
     --color-sombra: black;
@@ -51,7 +53,7 @@ Footer:
 }
 
 
-/*********************** Pantalla grande > 1024 **************************/
+/*********************** Pantalla muy grande > 1024 **************************/
 h1{ font-size: 3.5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
@@ -124,7 +126,7 @@ header {
     filter: drop-shadow(var(--sombra-menu)); 
 } */
 
-/*.contenedor_menu nav ul li*/ a:hover {
+.contenedor_menu nav ul li a:hover {
     transform: translateY(-5px) scale(1.1, 1.0);
     background-color: var(--color-hover);
     border-radius: 10px;
@@ -170,9 +172,10 @@ header {
     padding: 0 0 0.5em 0;
 }
 
-button{
+button, #principal a, .noticia a {
     font-size: 1.25em;
     font-weight: bold;
+    text-decoration: none;
     padding: 10px 30px;
     margin: 10px 0;
     display: inline-block;
@@ -185,10 +188,10 @@ button{
     transition: all 0.2s linear;
 }
 
-button:hover{
+button:hover, #principal a:hover, .noticia a:hover {
     background-color: var(--color-hover);
-    box-shadow: var(--sombra-btn);
-    transform: translate(0px,-15px);
+    box-shadow: var(--sombra-btnhover);
+    transform: translate(2px,-2px);
 }
 
 
@@ -213,27 +216,7 @@ button:hover{
     .noticia img{
         max-width: 100%;
     }
-    .noticia a{
-        color: var(--color-texto);
-        text-decoration: none;
-        font-size: 1.25em;
-        font-weight: bold;
-        padding: 10px 30px;
-        margin: 10px 0;
-        display: inline-block;
-        border-radius: 10px;
-        border: 2px solid var(--color-bordebtn);
-        box-shadow: var(--sombra-btn);
-        color: var(--color-texto);
-        background-color: var(--color-fondo);
-        cursor: pointer;
-        transition: all 0.2s linear;
-    }
-    .noticia a:hover{
-        background-color: var(--color-hover);
-        box-shadow: var(--sombra-btn);
-        transform: translate(0px,-15px);
-    }
+    
     .noticia h4{ /*fecha*/
         color:white;
         font-size: 13px;
@@ -278,8 +261,8 @@ button:hover{
 
 /**************************  NOSOTROS  **************************/
 #quienes_somos {
-    /* display: flex;
-    flex-direction: column; */
+    /*display: flex;
+    flex-direction: column;*/
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -291,10 +274,13 @@ button:hover{
     background-size: cover;
     background-position: center center;
     color: var(--color-texto);
-    font-size: 1.3em;
+    font-size: 1.7vw;
 }
 
-#quienes_somos h1{margin:0.5em}
+#quienes_somos h1{
+    margin:0.5em;
+    padding-top: 20px;
+}
 
 #quienes_somos p{
     padding: 0 50px;
@@ -304,11 +290,18 @@ button:hover{
 #quienes_somos ul{
     padding: 0 50px;
     margin: 0.0em;
+    list-style: none;
 }
+
 
 .subrayado {
     text-decoration-line: underline;
     text-decoration-style: wavy;
+}
+
+#listado_alumnos {
+    text-align: center;
+    background: var(--color-fondo-claro);
 }
 /**************************  FIN NOSOTROS  **************************/
 
@@ -318,13 +311,13 @@ button:hover{
 
 /********************  TARJETAS 3D DE RECETAS *******************/
 main h2 {
-    background: #ceeaf9;
+    background: var(--color-fondo-claro);
     padding-top: 60px;
     text-align: center;
 }
 
 .contenedor_tarjetas{
-    background: #ceeaf9;
+    background: var(--color-fondo-claro);
     /* max-width: 1200px; */
     margin: auto;
     margin-top: 0px;
@@ -434,6 +427,92 @@ main h2 {
     box-shadow: 1px 1px 30px 0px #449de6;
 }
 /******************  FIN TARJETAS 3D DE RECETAS ******************/
+
+
+
+
+
+
+
+/********************  RECETAS DE PLATOS   *******************/
+.contenedor_receta {
+    margin: 0 40px;
+    padding: 70px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+    .contenedor_receta h2 {
+        color: var(--color-texto);
+        text-shadow: var(--sombra-titulo);
+        /* font-size: 25px; */
+        background: none;
+        padding: 0 5px 200px 5px;
+        margin-top: -250px;
+    }
+
+    .contenedor_receta h3{
+        font-size: 20px;
+        padding: 10px 5px 10px 5px;
+        text-align: center;
+    }
+
+    .contenedor_receta h4{
+        padding: 10px 25px 0 25px;
+    }
+
+    .contenedor_receta ul {
+        list-style-type: none;
+        padding-left: 100px;
+        padding-right: 30px;
+    }
+
+    .contenedor_receta p {
+        padding: 10px 25px;
+    }
+
+    .imagen_receta {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        /* background-image: var(--lienzo); */
+    }
+
+    .imagen_receta img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .contenedor_receta .ingredientes {
+        background: var(--color-fondo-claro);
+        background-image: url("../img/ingredientes.svg");
+        background-repeat: no-repeat;
+        padding: 25px 20px 0 10px;
+    }
+
+    .contenedor_receta .ingredientes h3{
+        text-align: right;
+        padding-bottom: 50px;
+    }
+
+    .contenedor_receta .procedimiento {
+        background-image: url("../img/tablapicarv.svg");
+        /* background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment:fixed;
+        background-position: center; */
+        padding-top: 220px;
+    }
+
+    .contenedor_receta .nutricional {
+        background: #BB8FCE;
+        border-radius: 20px;
+        padding: 10px 10px;
+    }
+
+/******************  FIN RECETAS DE PLATOS  ******************/
 
 
 
@@ -570,10 +649,20 @@ footer .contenedor_footer {
     filter: drop-shadow(var(--sombra-menu)); 
 }
 
-footer p { 
+.contenedor_socialmedia a:hover {
+    filter: contrast(300%) drop-shadow(var(--sombra-btnhover));
+    transform: scale(1.3,1.3);
+}
+
+footer p, footer p a { 
     padding-right: 20px;
     color: var(--color-texto);
     text-shadow: var(--sombra-menu);
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-shadow: var(--sombra-btnhover);
 }
 
 
@@ -586,7 +675,7 @@ footer p {
  ****                           Media queries                            ****
  ****************************************************************************/
 
-/****************** Pantalla mediana <= 1024 *******************/
+/****************** Pantalla grande <= 1024 *******************/
 @media screen and (max-width: 1024px) { 
 
     #titulo {
@@ -615,7 +704,22 @@ footer p {
         padding: 1em;
     }
 
-  
+    .contenedor_receta {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor_receta .ingredientes h3{
+        padding-bottom: 100px;
+    }
+
+    .contenedor_receta .procedimiento {
+        background-image: url("../img/tablapicarv.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        /* background-attachment:fixed; */
+        background-position: center;
+        padding-top: 120px;
+    }
 }
 
 
@@ -687,6 +791,10 @@ footer p {
         grid-template-columns: 1fr;
     }
     
+    .contenedor_receta .ingredientes h3{
+        padding-bottom: 50px;
+    }
+
     footer .contenedor_footer {
         flex-direction: column;
         justify-content: center;
@@ -699,7 +807,7 @@ footer p {
 
 
 
-/****************** Pantalla mediana < 576 (min 400) *******************/
+/****************** Pantalla chica < 576 (min 400) *******************/
 @media screen and (max-width: 576px) and (min-width: 400px) { 
 
     .contenedor_menu{

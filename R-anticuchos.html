@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!----- iconos de fontawesome ---->
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <!----- fonts de google      ---->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>La cocina Doce</title>
+  <!----- icono para la pestaña ---->
+  <link rel="shortcut icon" href="favicon/Fast food_Monochromatic.ico" type="image/x-icon">
+  <!----- carga nuestro CSS     ---->
+  <link rel="stylesheet" href="css/miestilo.css">
+</head>
+<!---------------------------------------------- Fin del  HEAD -->
+
+
+
+<body>
+    <!------------------------------------------------->
+    <!------------------ HEADER ----------------------->
+    <!------------------------------------------------->
+    <!-- Header con título y menu:
+    Tiene un contenedor_header que engloba a contenedor_titulo y contenedor_menu
+    -->
+    <Header>  
+        <div class="contenedor_header">
+
+            <div class="contenedor_titulo">
+                <p id="titulo">👨‍🍳 La cocina Doce 🍴<p>
+            </div>
+
+            <div class="contenedor_menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#principal" ><i class="fa fa-home"      aria-hidden="true"></i><span class="off"> Inicio</span   ></a></li>
+                        <li><a href="recetas.html"         ><i class="fa fa-file-text" aria-hidden="true"></i><span class="off"> Recetas</span  ></a></li>
+                        <li><a href="acerca.html"          ><i class="fa fa-user"      aria-hidden="true"></i><span class="off"> Nosotros</span ></a></li>
+                        <li><a href="index.html#noticias"  ><i class="fa fa-newspaper" aria-hidden="true"></i><span class="off"> Noticias</span ></a></li>
+                        <li><a href="contactenos.html"     ><i class="fa fa-envelope"  aria-hidden="true"></i><span class="off"> Contacto</span ></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- hamburguer del menu -->
+            <i class="fa fa-bars" aria-hidden="true" id="icon_menu"></i>
+
+        </div>
+    </Header>
+    <!-------------------------------------------------------- Fin del Header-->
+
+
+
+    <!-------------------------------------------------->
+    <!--------------------- MAIN ----------------------->
+    <!-------------------------------------------------->
+    <!-- Main con ingredientes y receta -->
+    <main> 
+        <div class="contenedor_receta">
+            <div class="imagen_receta">
+                <img src="img/receta-anticuchos.jpg" alt="Anticuchos de pollo">
+                <h2>Anticuchos de pollo</h2>
+            </div>
+            <div class="ingredientes">
+                <h3>1 porción (2 brochettes)</h3>
+                <ul>
+                    <li>✔️ 150 g de pollo</li>
+                    <li>✔️ 2 dientes de ajo
+                    <li>✔️ 1 cda. de romero</li>
+                    <li>✔️ 1 cda. de orégano</li>
+                    <li>✔️ 4 cdas. de vinagre</li>
+                    <li>✔️ 3 cdas. de aceite</li>
+                    <li>✔️ jugo de 1/2 limón</li>
+                    <li>✔️ Jengibre fresco machacado</li>
+                    <li>✔️ 1 cdita. de pimentón extradulce</li>
+                    <li>✔️ 1 pizca de comino</li>
+                    <li>✔️ Sal y pimienta</li>
+                </ul>
+            </div>
+            <div class="procedimiento">
+                <h3>PROCEDIMIENTO</h3>
+                <ul>
+                    <li>□ Cortar el pollo en cubos de 2 x 2 cm aprox. Reservar.</li>
+                    <li>□ Aparte, en un bol, mezclar todos los condimentos. </li>
+                    <li>□ Colocar los trozos de pollo el bol con la mezcla.</li>
+                    <li>□ Dejar macerar en la heladera durante 3 o 4 hs.</li>
+                    <li>□ Luego, pinchar de a tres bocados en un palillo para brochette. </li>
+                    <li>□ Cocinar de un lado y otro en una plancha antiadherente o en la parrilla.</li>
+                </ul>
+                
+                <p>Se puede usar carne de vaca o de cerdo.</p>
+            </div>
+            <div class="nutricional">
+                <h3>INFORMACIÓN NUTRICIONAL</h3>
+                <h4>PROTEÍNAS</h4>
+                <p>Los alimentos que aportan proteínas “completas” provienen del reino animal (carnes, huevos, leche, yogur y queso)</p> 
+                <p>Son esenciales para el crecimiento. Forman y reparan tejidos de nuestro organismo, como los músculos. Las carnes y los huevos, además, brindan hierro que ayuda a transportar el oxígeno a todas las partes del cuerpo. La leche, el yogur y el queso también aportan calcio que ayuda a cuidar huesos y dientes, a todas las edades.</p> 
+            </div>
+        </div>
+    </main>
+    <!---------------------------------------------- Fin del Main-->
+
+
+
+    <!-------------------------------------------------->
+    <!------------------- FOOTER ----------------------->
+    <!-------------------------------------------------->
+    <!-- Pie de pagina con social media y autores
+    Tiene un contenedor_footer que engloba al contenedor_socialmedia y al <p> de autores
+    -->
+    <footer> 
+    <div class="contenedor_footer">
+        <div class="contenedor_socialmedia">
+            <a href="https://whatsapp.com"  target="_blank"><img src="favicon/whatsapp-logo-24.png"  alt="Whatsapp" ></a>
+            <a href="https://facebook.com"  target="_blank"><img src="favicon/facebook-logo-24.png"  alt="Facebook" ></a>
+            <a href="https://instagram.com" target="_blank"><img src="favicon/instagram-logo-24.png" alt="Instagram"></a>
+            <a href="https://twitter.com"   target="_blank"><img src="favicon/twitter-logo-24.png"   alt="Twitter"  ></a>
+        </div>
+        <p><a href="acerca.html">Hecho por John David Molina, Federico Schmidt y Juan D'Andrea</a></p>
+    </div>
+    </footer>
+    <!----------------------------------------------------------- Fin del Footer-->
+
+
+    <!-- carga de rutinas de javascript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
